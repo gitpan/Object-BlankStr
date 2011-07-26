@@ -1,0 +1,29 @@
+NAME
+    Object::BlankStr - True-valued 'blank' string object
+
+VERSION
+    version 0.01
+
+SYNOPSIS
+     use Object::BlankStr;
+
+     die Object::BlankStr; # dies without printing anything
+
+DESCRIPTION
+    Provides an object which stringifies to a 'blank' string (actually "
+    \b", that is, space followed by a backspace so when printed emulates
+    nothing). Since this is an object, it has a true value.
+
+    This is used for example when throwing exception with die(). You don't
+    want to print anything ("") but you need it to be a true value because
+    otherwise Perl will use "Died at ..." as the default error message.
+
+AUTHOR
+    Steven Haryanto <stevenharyanto@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2011 by Steven Haryanto.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
