@@ -17,13 +17,13 @@ Object::BlankStr - True-valued 'blank' string object
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
  use Object::BlankStr;
 
- die Object::BlankStr; # dies without printing anything
+ die Object::BlankStr->new; # dies without printing anything
 
 =head1 DESCRIPTION
 

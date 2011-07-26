@@ -2,12 +2,12 @@ NAME
     Object::BlankStr - True-valued 'blank' string object
 
 VERSION
-    version 0.01
+    version 0.02
 
 SYNOPSIS
      use Object::BlankStr;
 
-     die Object::BlankStr; # dies without printing anything
+     die Object::BlankStr->new; # dies without printing anything
 
 DESCRIPTION
     Provides an object which stringifies to a 'blank' string (actually "

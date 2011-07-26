@@ -19,4 +19,4 @@ requires:
 resources:
   homepage: http://search.cpan.org/dist/Object-BlankStr/
   repository: http://github.com/sharyanto/perl-Object-BlankStr
-version: 0.01
+version: 0.02
