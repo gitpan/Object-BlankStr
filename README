@@ -1,8 +1,8 @@
 NAME
-    Object::BlankStr - True-valued 'blank' string object
+    Object::BlankStr - Blank string object
 
 VERSION
-    version 0.02
+    version 0.03
 
 SYNOPSIS
      use Object::BlankStr;
@@ -10,13 +10,16 @@ SYNOPSIS
      die Object::BlankStr->new; # dies without printing anything
 
 DESCRIPTION
-    Provides an object which stringifies to a 'blank' string (actually "
-    \b", that is, space followed by a backspace so when printed emulates
-    nothing). Since this is an object, it has a true value.
+    Object::BlankStr is just an empty object which stringifies to "" (empty
+    string). Since it is an object, it has a boolean true value *in some
+    cases*. By *in some cases* it means that when object stringification
+    occurs before comparison, the truth value becomes false because Perl
+    regards empty string as false.
 
-    This is used for example when throwing exception with die(). You don't
-    want to print anything ("") but you need it to be a true value because
-    otherwise Perl will use "Died at ..." as the default error message.
+    So far the only case I've found this to be useful is for die()-ing
+    without printing anything. If you just use 'die;' or 'die "";' Perl will
+    print the default "Died at ..." message. But if you say 'die
+    Object::BlankStr->new;' Perl will die without printing anything.
 
 AUTHOR
     Steven Haryanto <stevenharyanto@gmail.com>
