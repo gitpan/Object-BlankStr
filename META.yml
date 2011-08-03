@@ -1,5 +1,5 @@
 ---
-abstract: 'Blank string object'
+abstract: "Object which stringifies to empty string (\"\")"
 author:
   - 'Steven Haryanto <stevenharyanto@gmail.com>'
 build_requires:
@@ -19,4 +19,4 @@ requires:
 resources:
   homepage: http://search.cpan.org/dist/Object-BlankStr/
   repository: http://github.com/sharyanto/perl-Object-BlankStr
-version: 0.03
+version: 0.04
