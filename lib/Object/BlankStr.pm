@@ -1,6 +1,8 @@
 package Object::BlankStr;
 
-our $VERSION = '0.04'; # VERSION
+use 5.010001;
+
+our $VERSION = '0.05'; # VERSION
 
 use overload q{""} => sub { "" };
 
@@ -9,8 +11,8 @@ sub new { bless(\"$_[0]", $_[0]) }
 1;
 # ABSTRACT: Object which stringifies to empty string ("")
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -19,7 +21,7 @@ Object::BlankStr - Object which stringifies to empty string ("")
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 
@@ -52,9 +54,13 @@ printing anything. If you just use 'die;' or 'die "";' Perl will print the
 default "Died at ..." message. But if you say 'die Object::BlankStr->new;' Perl
 will die without printing anything.
 
+=for Pod::Coverage ^(new)$
+
 =head1 SEE ALSO
 
 L<Object::NulStr>
+
+L<Object::SpaceBackStr>
 
 =head1 AUTHOR
 
@@ -62,10 +68,9 @@ Steven Haryanto <stevenharyanto@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Steven Haryanto.
+This software is copyright (c) 2013 by Steven Haryanto.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
